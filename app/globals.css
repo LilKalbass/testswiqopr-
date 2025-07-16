@@ -1,26 +1,53 @@
-@import "tailwindcss";
+  @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @theme {
+    --font-space: var(--font-space);
+    --bg-coverchenko: url("/public/assets/bg.webp");
+    --swiper-pagination-color: #4B4B4B;
+    --swiper-pagination-bottom: 0px;
+    --swiper-pagination-top:auto;
+    --swiper-navigation-color: #707070;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  body {
+    @apply font-space
+  }
+  .container {
+    @apply max-w-[1400px] z-10
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply duration-300 border-1 border-[#D1CFCF] rounded-full p8 text-[var(--swiper-navigation-color)] transition-all
+  }
+  .swiper-button-next {
+    @apply -right-20
+  }
+  .swiper-wrapper {
+    @apply overflow-x-visible
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    @apply text-green-300 border-green-300 duration-300 transition-all
+  }
+  .swiper-pagination-bullet{
+    @apply bg-gray-400  w-[40px] h-3 opacity-100 transition-colors duration-300 z-50 ;
+    background: var(--swiper-pagination-color);
+  }
+  .swiper-pagination-bullet-active {
+  }
+
+  .swiper-pagination,
+  .swiper-pagination-clickable,
+  .swiper-pagination-bullets,
+  .swiper-pagination-horizontal,
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    @apply bottom-[var(--swiper-pagination-bottom)] top-[var(--swiper-pagination-top)]
+  }
+
+  .swiper-pagination {
+  }
