@@ -20,13 +20,6 @@
   .swiper-button-next {
     @apply duration-300 border-1 border-[#D1CFCF] rounded-full p-8 text-[var(--swiper-navigation-color)] transition-all
   }
-  .swiper-button-next {
-    @apply -right-20
-  }
-  .swiper-wrapper {
-    @apply overflow-x-visible
-  }
-
   .swiper-button-prev:hover,
   .swiper-button-next:hover {
     @apply text-green-300 border-green-300 duration-300 transition-all
@@ -35,9 +28,6 @@
     @apply bg-gray-400  w-[40px] h-3 opacity-100 transition-colors duration-300 z-50 ;
     background: var(--swiper-pagination-color);
   }
-  .swiper-pagination-bullet-active {
-  }
-
   .swiper-pagination,
   .swiper-pagination-clickable,
   .swiper-pagination-bullets,
@@ -47,7 +37,4 @@
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     @apply bottom-[var(--swiper-pagination-bottom)] top-[var(--swiper-pagination-top)]
-  }
-
-  .swiper-pagination {
   }
