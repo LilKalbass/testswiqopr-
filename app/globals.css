@@ -18,7 +18,7 @@
 
   .swiper-button-prev,
   .swiper-button-next {
-    @apply duration-300 border-1 border-[#D1CFCF] rounded-full p8 text-[var(--swiper-navigation-color)] transition-all
+    @apply duration-300 border-1 border-[#D1CFCF] rounded-full p-8 text-[var(--swiper-navigation-color)] transition-all
   }
   .swiper-button-next {
     @apply -right-20
